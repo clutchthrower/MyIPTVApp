@@ -50,6 +50,9 @@ jobs:
       - name: Change wrapper permissions
         run: chmod +x ./gradlew
 
+      - name: Copy gradle properties file
+        run: mkdir -p ~/.gradle ; cp .github/ci-gradle.properties ~/.gradle/gradle.properties
+
       # Run Tests Build
       # - name: Run gradle tests
       #   run: ./gradlew test
